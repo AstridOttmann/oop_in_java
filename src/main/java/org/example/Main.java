@@ -35,6 +35,7 @@ public class Main {
 
         StudentNew[] allStudents = {alpha, beta, gamma, delta};
         StudentNew[] otherStudents = {a, b, c, d};
+
         StudentDB studentArray1 = new StudentDB(allStudents);
         StudentDB studentArray2 = new StudentDB(otherStudents);
         System.out.println(Arrays.toString(studentArray2.getAllStudents()));
@@ -43,6 +44,12 @@ public class Main {
         System.out.println(studentArray2);
         System.out.println(studentArray1.randomStudent());
         System.out.println(studentArray2.randomStudent());
+
+        StudentNew toAdd = new StudentNew("Added Student", 9);
+        System.out.println(Arrays.toString(studentArray1.addStudent(toAdd)));
+        System.out.println(Arrays.toString(studentArray2.addStudent(alpha)));
+        System.out.println(Arrays.toString(studentArray1.removeStudent(alpha)));
+        System.out.println(Arrays.toString(studentArray2.removeStudent(a)));
 
     }
 }
